@@ -3,8 +3,10 @@
 set -e 
 #cleanup function
 clean_resources() {
+	kubectl delete -f oai-ueransim2.yaml
+        helm uninstall upf2 
 	kubectl delete -f oai-ueransim.yaml
-        helm uninstall upf2
+        helm uninstall upf
         helm uninstall smf
         helm uninstall amf
         helm uninstall ausf
