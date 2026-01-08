@@ -29,7 +29,7 @@ spec:
         - name: AMF_VALUE
           value: "8000"
         - name: APN
-          value: "{TOBECONFIGURED}"
+          value: "oai"
         - name: GNB_IP_ADDRESS
           value: "172.21.70.143"
         - name: GTP_IP
@@ -65,33 +65,33 @@ spec:
         - name: PDU_TYPE
           value: IPv4
         - name: SD
-          value: "{TOBECONFIGURED}"
+          value: "0x000001"
         - name: SD_0
-          value: "{TOBECONFIGURED}"
+          value: "0x000001"
         - name: SD_1
-          value: "{TOBECONFIGURED}"
+          value: "0x000001"
         - name: SD_2
-          value: "{TOBECONFIGURED}"
+          value: "0x000001"
         - name: SD_C
-          value: "{TOBECONFIGURED}"
+          value: "0x000001"
         - name: SD_D
-          value: "{TOBECONFIGURED}"
+          value: "0x000001"
         - name: SD_R
-          value: "{TOBECONFIGURED}"
+          value: "0x000001"
         - name: SST
-          value: "{TOBECONFIGURED}"
+          value: "1"
         - name: SST_0
-          value: "{TOBECONFIGURED}"
+          value: "1"
         - name: SST_1
-          value: "{TOBECONFIGURED}"
+          value: "1"
         - name: SST_2
-          value: "{TOBECONFIGURED}"
+          value: "1"
         - name: SST_C
-          value: "{TOBECONFIGURED}"
+          value: "1"
         - name: SST_D
-          value: "{TOBECONFIGURED}"
+          value: "1"
         - name: SST_R
-          value: "{TOBECONFIGURED}"
+          value: "1"
         - name: TAC
           value: "0x00001"
 
@@ -101,6 +101,6 @@ kind: NetworkAttachmentDefinition
 metadata:
   name: ueransim2-net
 spec:
-  config: '{ "cniVersion": "0.3.0", "type": "macvlan", "master": "enp0s31f6", "ipam": { "type": "static", "addresses": [ { "address": "172.21.70.143/24",
+  config: '{ "cniVersion": "0.3.0", "type": "macvlan", "master": "ens3", "ipam": { "type": "static", "addresses": [ { "address": "172.21.70.143/24",
     "gateway": "172.21.70.1" } ] } }'
     
