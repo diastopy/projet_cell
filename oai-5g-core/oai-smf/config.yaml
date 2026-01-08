@@ -85,7 +85,7 @@ smf:
       - sNssai: *embb_slice1
         dnnSmfInfoList:
           - dnn: "oai"
-          - dnn: "TOBECONFIGURED"
+          - dnn: "oai2"
       - sNssai: *embb_slice2
         dnnSmfInfoList:
           - dnn: "ims"
@@ -97,7 +97,7 @@ smf:
         session_ambr_ul: "2000Mbps"
         session_ambr_dl: "4000Mbps"
     - single_nssai: *embb_slice1
-      dnn: "TOBECONFIGURED"
+      dnn: "oai2"
       qos_profile:
         5qi: 9
         session_ambr_ul: "2000Mbps"
@@ -114,7 +114,7 @@ dnns:
   - dnn: "oai"
     pdu_session_type: "IPV4"
     ipv4_subnet: "12.1.1.0/24"
-  - dnn: "TOBECONFIGURED"
+  - dnn: "oai2"
     pdu_session_type: "IPV4"
     ipv4_subnet: "12.1.1.12/24"
   - dnn: "ims"
