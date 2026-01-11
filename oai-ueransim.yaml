@@ -1,4 +1,3 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -17,8 +16,8 @@ spec:
       labels:
         app: ueransim
     spec:
-      nodeName: 
-      containers:           
+      nodeName:
+      containers:
       - image: rohankharade/ueransim:latest
         imagePullPolicy: IfNotPresent
         securityContext:
@@ -65,19 +64,19 @@ spec:
         - name: PDU_TYPE
           value: IPv4
         - name: SD
-          value: "0x000001"
+          value: "0x000002"
         - name: SD_0
-          value: "0x000001"
+          value: "0x000002"
         - name: SD_1
-          value: "0x000001"
+          value: "0x000002"
         - name: SD_2
-          value: "0x000001"
+          value: "0x000002"
         - name: SD_C
-          value: "0x000001"
+          value: "0x000002"
         - name: SD_D
-          value: "0x000001"
+          value: "0x000002"
         - name: SD_R
-          value: "0x000001"
+          value: "0x000002"
         - name: SST
           value: "1"
         - name: SST_0
@@ -103,4 +102,3 @@ metadata:
 spec:
   config: '{ "cniVersion": "0.3.0", "type": "macvlan", "master": "ens3", "ipam": { "type": "static", "addresses": [ { "address": "172.21.70.141/24",
     "gateway": "172.21.70.1" } ] } }'
-    
