@@ -29,6 +29,9 @@ snssais:
   - &embb_slice2
     sst: 1
     sd: 000002
+  - &urll_slice1
+    sst: "2"
+    sd: "000001"
 
 ############## SBI Interfaces
 ### Each NF takes its local SBI interfaces and remote interfaces from here, unless it gets them using NRF discovery mechanisms
@@ -99,6 +102,7 @@ amf:
       nssai:
         - *embb_slice1
         - *embb_slice2
+        - *urll_slice1
   supported_integrity_algorithms:
 #    - "NIA0"
     - "NIA1"
