@@ -3,11 +3,8 @@
 set -e 
 #cleanup function
 clean_resources() {
-<<<<<<< HEAD
 	kubectl delete -f oai-ueransim2.yaml
         helm uninstall upf2 
-=======
->>>>>>> abd113773843980f8c315d3c5d964b889a50b090
 	kubectl delete -f oai-ueransim.yaml
         helm uninstall upf
         helm uninstall smf
@@ -41,7 +38,6 @@ launch_resources() {
         sleep 10
         kubectl apply -f oai-ueransim.yaml
         sleep 5
-<<<<<<< HEAD
 
         helm install upf2 oai-5g-core/oai-upf2/
 
@@ -83,21 +79,14 @@ clear_ue2() {
 
 
 
-=======
-}
-
->>>>>>> abd113773843980f8c315d3c5d964b889a50b090
 show_help() {
 	echo "usage :"
 	echo "./up.sh --launch pour lancer les pods"
 	echo "./up.sh --clear pour tout arrêter"
-<<<<<<< HEAD
 	echo "./up.sh --uun pour lancer UE1 et UPF1"
 	echo "./up.sh --udeux pour lancer UE2 et UPF2"
 	echo "./up.sh --cun pour clear UE1 et UPF1"
 	echo "./up.sh --cdeux pour clear UE2 et UPF2" 
-=======
->>>>>>> abd113773843980f8c315d3c5d964b889a50b090
 }
 
 
@@ -123,7 +112,6 @@ while [[ $# -gt 0 ]]; do
       		launch_resources
       		exit 0
 		;;
-<<<<<<< HEAD
 		--uun)
 		launch_ue1
 		exit 0
@@ -140,8 +128,6 @@ while [[ $# -gt 0 ]]; do
 		clear_ue2
 		exit 0
 		;;
-=======
->>>>>>> abd113773843980f8c315d3c5d964b889a50b090
 		*)
 		echo "Argument inconnu : $1"
 		show_help
