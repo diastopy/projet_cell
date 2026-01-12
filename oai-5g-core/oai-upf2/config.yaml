@@ -23,6 +23,9 @@ http_version: 2
 ## general single_nssai configuration
 ## Defines YAML anchors, which are reused in the config file
 snssais:
+  - &urll_slice1
+    sst: "2"
+    sd: "000001"
   - &embb_slice2
     sst: 1
     sd: 000002 # in hex
@@ -67,9 +70,7 @@ upf:
   remote_n6_gw: 172.21.70.160      # Dummy host since simple-switch does not use N6 GW
   upf_info:
     sNssaiUpfInfoList:
-    - sNssai:
-          sst: 1
-          sd: 000002
+    - sNssai: *urll_slice1
       dnnUpfInfoList:
         - dnn: "oai"
     - sNssai: *embb_slice2

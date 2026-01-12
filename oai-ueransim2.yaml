@@ -64,19 +64,19 @@ spec:
         - name: PDU_TYPE
           value: IPv4
         - name: SD
-          value: "0x000002"
+          value: "0x000001"
         - name: SD_0
-          value: "0x000002"
+          value: "0x000001"
         - name: SD_1
-          value: "0x000002"
+          value: "0x000001"
         - name: SD_2
-          value: "0x000002"
+          value: "0x000001"
         - name: SD_C
-          value: "0x000002"
+          value: "0x000001"
         - name: SD_D
-          value: "0x000002"
+          value: "0x000001"
         - name: SD_R
-          value: "0x000002"
+          value: "0x000001"
         - name: SST
           value: "1"
         - name: SST_0

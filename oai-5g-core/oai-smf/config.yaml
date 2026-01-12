@@ -26,6 +26,9 @@ snssais:
   - &embb_slice1
     sst: 1
     sd: 000001
+  - &urll_slice1
+    sst: "2"
+    sd: "000001"
   - &embb_slice2
     sst: 1
     sd: 000002 # in hex
@@ -88,7 +91,10 @@ smf:
       - sNssai: *embb_slice2
         dnnSmfInfoList:
           - dnn: "ims"
+      - sNssai: *urll_slice1
+        dnnSmfInfoList:
           - dnn: "oai"
+
   local_subscription_infos:
     - single_nssai: *embb_slice1
       dnn: "oai"
@@ -97,15 +103,15 @@ smf:
         session_ambr_ul: "2000Mbps"
         session_ambr_dl: "4000Mbps"
     - single_nssai: *embb_slice2
-      dnn: "oai"
+      dnn: "ims"
       qos_profile:
         5qi: 2
         session_ambr_ul: "1000Mbps"
         session_ambr_dl: "2000Mbps"
-    - single_nssai: *embb_slice2
-      dnn: "ims"
+    - single_nssai: *urll_slice1
+      dnn: "oai"
       qos_profile:
-        5qi: 2
+        5qi: 80
         session_ambr_ul: "1000Mbps"
         session_ambr_dl: "2000Mbps"
 
